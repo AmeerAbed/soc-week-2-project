@@ -1,7 +1,15 @@
 console.log('repeater script has loaded');
 
 // write this function!
-function repeater() {
+function repeater(userPhrase, userNum) {
+
+  let concatenateValue = '';
+  for (i = 0; i < userNum; i++) {
+    concatenateValue += userPhrase + "\n";
+  }
+  return concatenateValue;
+
+
 }
 
 console.assert(repeater('horse', 2) === 'horse\nhorse\n', 'first');
