@@ -1,9 +1,22 @@
 console.log('tempConverter script has loaded');
 
 // write this function!
-function tempConverter(temperature, degrees) {
-}
+function tempConverter(degrees, temperature) {
+  var resultValue = 0;
+  if (temperature === 'f' || temperature === 'F') {
+    resultValue = degrees * 9 / 5 + 32;
 
+    return resultValue;
+  }
+  else if (temperature === 'c' || temperature === 'C') {
+    resultValue = (degrees - 32) * 5 / 9;
+    return Number(resultValue.toFixed(2));
+  }
+  else {
+    return temperature + " " + "is not supported";
+  }
+
+}
 // if the user wants to convert to farenheit
 console.assert(tempConverter(53, 'farenheit') === 127.4, 'first');
 console.assert(tempConverter(0, 'farenheit') === 32, 'second');
