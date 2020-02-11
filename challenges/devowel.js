@@ -1,7 +1,8 @@
 console.log('devowel script has loaded');
 
 // write this function!
-function devowel() {
+function devowel(uInput) {
+  return uInput.replace(/[aeiou]+/gi, ''); //replace a, e, i, o and u with nothing.
 }
 
 // remove all vowels, lower and upper case!
